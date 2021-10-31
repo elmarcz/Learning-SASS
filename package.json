@@ -1,0 +1,11 @@
+{
+  "name": "Learning-SASS",
+  "version": "1.0.0",
+  "description": "A project to practice SASS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marc Medrano",
+  "license": "ISC"
+}

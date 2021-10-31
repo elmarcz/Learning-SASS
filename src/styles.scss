@@ -1,0 +1,67 @@
+// Nesting
+@use 'nesting'; // Import the code of ./nesting.scss
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+// Variables
+$main-colour: #ccc;
+$font-colour: #000;
+$font-family: 'Source Sans Pro', sans-serif;
+
+body {
+  background: $main-colour;
+}
+
+.title {
+    color: $font-colour;
+    font-family: $font-family;
+}
+
+// Mixins
+@mixin customised-box($background: white, $text-decoration: none) {
+    background-color: $background;
+    border: 4px solid black;
+    box-shadow: 0px 0px 2px black;
+    color: $font-colour;
+    text-decoration: $text-decoration;
+    margin: 10px;
+}
+
+#box-1, #box-2{
+    @include customised-box();
+    margin: 10px;
+}
+
+// Operators
+#box-1, #box-2{
+    width: 200px + 200;
+}
+
+/* Dictionary
+
+MIXINS -> A mixin is like a js function containing .scss styles.
+
+* @mixin <name> (parameter){
+    code
+}
+
+* element {
+    @include <name>
+}
+
+
+NESTING -> A nesting is a set of code which may be in other files.
+
+* @use <the name of the file>
+
+* You have to put the @use property at the beginning of your code.
+
+
+OPERATORS -> We can operate with sizes without the need to determine them
+
+*#box{
+    width: 200px + 200;
+}
+
+*/
